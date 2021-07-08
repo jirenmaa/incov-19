@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import axiosInstance from '../plugins/axios'
 
 import LoadingArticle from '../components/LoadingArticle';
 
@@ -14,7 +14,7 @@ const News = () => {
   }, []);
 
   const fetch9newsArticles = async () => {
-    await axios.get(`http://localhost:8000/9news`)
+    await axiosInstance.get("/9news")
       .then((response) => {
         setArticles(response.data.data);
         setisLoading(false)
@@ -24,7 +24,7 @@ const News = () => {
   }
 
   const fetchMntArticles = async () => {
-    await axios.get(`http://localhost:8000/medicalnewstoday`)
+    await axiosInstance.get("/medicalnewstoday")
       .then((response) => {
         setArticles(articles => articles.concat(response.data.data));
       }).catch(() => {
@@ -34,7 +34,7 @@ const News = () => {
 
   const fetchMsnArticles = async () => {
     setisLoading(true)
-    await axios.get(`http://localhost:8000/msn`)
+    await axiosInstance.get("/msn")
       .then((response) => {
         setArticles(articles => articles.concat(response.data.data));
       }).catch(() => {
