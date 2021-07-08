@@ -44,7 +44,6 @@ const News = () => {
 
   return (
     <section className="m-8" data-name="news">
-      {process.env.NODE_ENV}
       {isLoading
         ? <LoadingArticle></LoadingArticle>
         :
