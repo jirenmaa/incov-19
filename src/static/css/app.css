@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  scrollbar-width: thin;
+}
+
+[data-name="heading"] {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  bottom: 5rem;
+  font-size: 9rem;
+}
+
+.article {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.picture {
+  width: 19rem;
+  height: 12rem;
+}
+
+.covid {
+  width: 24rem;
+}
+
+.top-10 {
+  position: relative;
+  margin-top: 2rem;
+  width: 18rem;
+  height: 18rem;
+}
+
+.top-10 > .info {
+  position: absolute;
+}
+
+.top-10 > .info > div {
+  width: 16rem;
+}
+
+.content > .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.content > .detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.datetime {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
