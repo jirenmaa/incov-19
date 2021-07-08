@@ -62,7 +62,7 @@ const Incov = () => {
       </div>
       <div className="flex flex-col pb-24">
         <div className="capitalize font-bold text-5xl text-primary mx-6">
-          10 country with most many cases.
+          10 country with most many cases. {process.env.NODE_ENV}
         </div>
         <div className="flex flex-wrap justify-evenly">
           {countriesCases.map((cases, index) => (
